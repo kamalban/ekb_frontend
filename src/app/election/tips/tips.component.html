@@ -1,0 +1,72 @@
+<div class="zone">
+
+    <!-- With Tick Put This Color 00FFFF -->
+    <button [ngClass]="{'active': up }" class="active btn bg-white" (click)="click('up')">Uttarpradesh</button>
+    <button [ngClass]="{'active': uttrakhand }" class="btn bg-white" (click)="click('uttrakhand')">Uttarakhand</button>
+    <button [ngClass]="{'active': punjab}"  class="btn bg-white " (click)="click('punjab')">Punjab</button>
+    <button [ngClass]="{'active': goa}"  class="btn bg-white" (click)="click('goa')">Goa</button>
+</div>
+
+
+  <!-- Image Section -->
+<div class="uttarpradesh" *ngIf="up === true"> 
+ <p class="toptext">Past Elections Results</p> 
+<div class="year">
+  <button  [ngClass]="{'active': year2017 === true}" class="btn" (click)="switchData('year2017')">2017</button>
+  <button [ngClass]="{'active': year2012 === true}" class="btn" (click)="switchData('year2012')">2012</button>
+</div>
+<div *ngIf="year2017 === true" class="seventeen upimage">
+  <img src="../../../assets/tipsimage/uttarpradesh2017.png" class="img-fluid">
+</div>
+<div *ngIf="year2012 === true" class="eleven upimage2">
+  <img src="../../../assets/tipsimage/uttarpradesh2012.png" class="img-fluid">
+</div>
+</div>
+
+
+
+<div class="uttrakhand" *ngIf="uttrakhand === true"> 
+  <p class="toptext">Past Elections Results</p> 
+  <div class="year">
+    <button [ngClass]="{'active': year2017 === true}" class="active btn" (click)="switchData('year2017')">2017</button>
+    <button [ngClass]="{'active': year2012 === true}" class="btn" (click)="switchData('year2012')">2012</button>
+  </div>
+  <div *ngIf="year2017 === true" class="seventeen">
+    <img src="../../../assets/tipsimage/uttrakhand2017.png" class="img-fluid">
+  </div>
+<div *ngIf="year2012 === true" class="eleven">
+    <img src="../../../assets/tipsimage/uttrakhand2012.png" class="img-fluid">
+  </div>
+</div>
+
+
+
+<div class="punjab" *ngIf="punjab === true"> 
+  <p class="toptext">Past Elections Results</p> 
+  <div class="year">
+    <button [ngClass]="{'active': year2017 === true}" class="active btn" (click)="switchData('year2017')">2017</button>
+  <button [ngClass]="{'active': year2012 === true}" class="btn" (click)="switchData('year2012')">2012</button>
+  </div>
+  <div *ngIf="year2017 === true"class="seventeen">
+    <img src="../../../assets/tipsimage/punjab2017.png" class="img-fluid">
+  </div>
+<div *ngIf="year2012 === true" class="eleven">
+    <img src="../../../assets/tipsimage/punjab2012.png" class="img-fluid">
+  </div>
+</div>
+
+
+
+<div class="goa" *ngIf="goa === true"> 
+  <p class="toptext">Past Elections Results</p> 
+  <div class="year">
+    <button [ngClass]="{'active': year2017 === true}" class="active btn" (click)="switchData('year2017')">2017</button>
+    <button [ngClass]="{'active': year2012 === true}" class="btn" (click)="switchData('year2012')">2012</button>
+  </div>
+<div *ngIf="year2017 === true" class="seventeen">
+    <img src="../../../assets/tipsimage/goa2017.png" class="img-fluid">
+  </div>
+<div *ngIf="year2012 === true" class="eleven">
+    <img src="../../../assets/tipsimage/goa2012.png" class="img-fluid">
+  </div>
+</div>

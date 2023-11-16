@@ -1,0 +1,38 @@
+
+<div class="heading">
+    <p class="back-trans"><span i18n>Welcome Baazigar! For which state would you like to predict the election results?</span></p>
+</div>
+<div class="container">
+    <div  *ngIf="stateFlag" class="row px-4 text-center minus-margin">
+
+            <div *ngFor="let stateName of doneState; let i = index" class="col-6 p-0 m-0">
+                  
+              <div class="posre">
+                <img src="{{image}}img/{{state[i]}}.svg" class="width"
+                    [routerLink]="['/preview',{'state':state[i]}]">
+                    <div class="posab"><img src="{{image}}img/text{{state[i]}}.svg"></div>
+                    <div *ngIf="stateName === 'Checked-'+state[i]" class="postick"><img src="{{image}}img/bigtick.svg"></div>
+                  </div>
+            </div>
+
+    </div>
+</div>
+
+<ng-template #internetNotWorking let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title" i18n>Whoops</h4>
+
+  </div>
+  <div class="modal-body">
+    <p i18n> Oops, no internet connection! Please check the connection and try again.</p>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn clrgreen" (click)="d('Cross click')">
+      <span class="nointernate" i18n="@@99906972521">Ok</span> 
+    </button>
+  </div>
+</ng-template>
+<div class="mt-1"> <a class="hundred"  href="http://pubads.g.doubleclick.net/gampad/clk?id=5928785472&iu=/2599136/OzoneOverseas__Click_Tracker" target="_blank" ><img src="{{image}}img/Ozone.jpg" class="d-block m-auto w-50"></a></div>
+
+
+<iframe src="https://securepubads.g.doubleclick.net/gampad/adx?iu=/2599136/OzoneOverseas__Impression_Tracker&sz=1x1&c=%%CACHEBUSTER%%&tile=1" height="0" width="0" class="invisible"></iframe>
