@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpService } from 'src/app/http.service';
 import { ActivatedRoute, Params, Router } from '@angular/router';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-form',
@@ -12,14 +12,14 @@ export class FormComponent implements OnInit {
 
 
   constructor(
-    private fb: FormBuilder,
+    private fb: UntypedFormBuilder,
     private httpService: HttpService,
     private route: Router,
   ) { }
 
-  form: FormGroup = this.fb.group({
-    name: new FormControl('', Validators.required),
-    email: new FormControl('', [Validators.required, Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$')]),
+  form: UntypedFormGroup = this.fb.group({
+    name: new UntypedFormControl('', Validators.required),
+    email: new UntypedFormControl('', [Validators.required, Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$')]),
   });
 
   public num: any;
