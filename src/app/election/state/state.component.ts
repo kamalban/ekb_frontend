@@ -65,64 +65,34 @@ export class StateComponent implements OnInit {
 
 
   //"BJP+": [{ 'name': 'Awadh', 'color': '#27AE60' }, { 'name': 'xyz', 'color': '#7F3DFF' }, { 'name': 'prv', 'color': '#F2AE2E' }],
-  public group: any = {
-    "UP": {
-      "Awadh": {
-        "BJP+": [{ 'name': 'AD', 'color': '#27AE60' }, { 'name': 'NP', 'color': '#7F3DFF' }],
-        "SP+": [{ 'name': 'AD(KW)', 'color': '#CD3DFF' }, { 'name': 'RLD', 'color': '#7F3DFF' }, { 'name': 'SBSP', 'color': '#F22E80' },
-        { 'name': 'MD', 'color': '#27AE60' }, { 'name': 'PS', 'color': '#F28C2E' }, { 'name': 'SP (Lohia)', 'color': '#F28C2E' },
-        { 'name': 'NCP', 'color': '#2EABF2' }, { 'name': 'JSP', 'color': '#F22E80' }
-        ],
-        "BSP": [],
-        "INC": [],
-        "Others": [],
-      },
-      "Purwanchal": {
-        "BJP+": [{ 'name': 'AD', 'color': '#27AE60' }, { 'name': 'NP', 'color': '#7F3DFF' }],
-        "SP+": [{ 'name': 'AD(KW)', 'color': '#CD3DFF' }, { 'name': 'RLD', 'color': '#7F3DFF' }, { 'name': 'SBSP', 'color': '#F22E80' },
-        { 'name': 'MD', 'color': '#27AE60' }, { 'name': 'PS', 'color': '#F28C2E' }, { 'name': 'SP (Lohia)', 'color': '#F28C2E' },
-        { 'name': 'NCP', 'color': '#2EABF2' }, { 'name': 'JSP', 'color': '#F22E80' }],
-        "BSP": [],
-        "INC": [],
-        "Others": [],
-      },
-      "West UP": {
-        "BJP+": [{ 'name': 'AD', 'color': '#27AE60' }, { 'name': 'NP', 'color': '#7F3DFF' }],
-        "SP+": [{ 'name': 'AD(KW)', 'color': '#CD3DFF' }, { 'name': 'RLD', 'color': '#7F3DFF' }, { 'name': 'SBSP', 'color': '#F22E80' },
-        { 'name': 'MD', 'color': '#27AE60' }, { 'name': 'PS', 'color': '#F28C2E' }, { 'name': 'SP (Lohia)', 'color': '#F28C2E' },
-        { 'name': 'NCP', 'color': '#2EABF2' }, { 'name': 'JSP', 'color': '#F22E80' }],
-        "BSP": [],
-        "INC": [],
-        "Others": [],
-      },
-      "Bundelkhand": {
-        "BJP+": [{ 'name': 'AD', 'color': '#27AE60' }, { 'name': 'NP', 'color': '#7F3DFF' }],
-        "SP+": [{ 'name': 'AD(KW)', 'color': '#CD3DFF' }, { 'name': 'RLD', 'color': '#7F3DFF' }, { 'name': 'SBSP', 'color': '#F22E80' },
-        { 'name': 'MD', 'color': '#27AE60' }, { 'name': 'PS', 'color': '#F28C2E' }, { 'name': 'SP (Lohia)', 'color': '#F28C2E' },
-        { 'name': 'NCP', 'color': '#2EABF2' }, { 'name': 'JSP', 'color': '#F22E80' }],
-        "BSP": [],
-        "INC": [],
-        "Others": [],
-      }
-    },
-    'Uttarakhand': {
+  public group: any = {   
+    'MP': {
       "INC": [],
       "BJP": [],
-      "AAP": [],
+      "BSP": [],
       "Others": []
     },
-    'Goa': {
-      "INC+": [{ 'name': 'GFP', 'color': '#F22E80' }],
+    'Chhattisgarh': {
+      "INC": [],
+      "BJP": [], 
+      "Others": []
+    },
+    'Rajasthan': {
+      "INC": [],
       "BJP": [],
-      "AAP": [],
-      "MGP+": [{ 'name': 'TMC', 'color': '#CD3DFF' }],
+      "BSP": [],
       "Others": [],
     },
-    'Punjab': {
+    'Mizoram': {
+      "MNF": [], 
       "INC": [],
-      "SAD+": [{ 'name': 'BSP', 'color': '#2EABF2' }],
-      "AAP": [],
-      "BJP+": [{ 'name': 'PLC', 'color': '#27AE60' },{ 'name': 'SAD (Sanyukt)', 'color': '#F22E80' }],
+      "ZPM": [], 
+      "Others": [],
+    },
+    'Telangana': {
+      "BRS": [], 
+      "INC": [],
+      "BJP": [], 
       "Others": [],
     }
   }
@@ -177,6 +147,7 @@ export class StateComponent implements OnInit {
           }
         }
         let tmp: any = localStorage.getItem('userData');
+        //console.log('########',tmp);
         if (tmp) {
           tmp = JSON.parse(tmp)
           // console.log('156 : ' + tmp[this.stateName])

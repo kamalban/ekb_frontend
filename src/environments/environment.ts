@@ -3,10 +3,11 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  baseUrl: 'http://localhost:4200',
-  production: false,
+  baseUrl: 'http://127.0.0.1:8081/',
+  production: true,
   // url: 'https://ekb.gamesmasti.com/api/',
-  url: "http://192.168.1.5:8081/api/",
+  //url: "http://192.168.1.5:8081/api/",
+  url: "http://127.0.0.1:8081/api/",
   image: "../../../assets/"
 };
 

@@ -805,7 +805,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="7301133861612287340" datatype="html">
-        <source> Tell us Which Major Party Will Win How Many Seats In Up, Punjab, Uttrakhand And Goa Elections And Win Up To Rs 2.5 Lacs!!! More Than 120 Prizes On Offer - Hurry!</source>
+        <source> Tell us Which Major Party Will Win How Many Seats In Up, Punjab, MP And Goa Elections And Win Up To Rs 2.5 Lacs!!! More Than 120 Prizes On Offer - Hurry!</source>
         <target>हमें बताएं कि कौन सी मुख्य पार्टी यूपी, पंजाब,उत्तराखंड और गोवा चुनावों में कितनी सीटें जीतेगी और 2.5 लाख तक के 120 उपहार जीतें, जल्दी करें.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/election/t/t.component.html</context>
@@ -1375,7 +1375,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="2384088596160351315" datatype="html">
-        <source>Play Election Ke Baazigar Game for FREE and WIN prizes worth Rs 5 lakhs!!! Just predict how many seats the major parties will win in the upcoming UP, Uttrakhand, Punjab and Goa Assembly Elections 2022. Hurry!</source>
+        <source>Play Election Ke Baazigar Game for FREE and WIN prizes worth Rs 5 lakhs!!! Just predict how many seats the major parties will win in the upcoming UP, MP, Punjab and Goa Assembly Elections 2022. Hurry!</source>
         <target>खेलें इलेक्शन के बाज़ीगर गेम फ्री में और जीते 5 लाख रुपये के इनाम! बस अंदाज़ा लगाएं कि आने वाले यूपी, उत्तराखंड, पंजाब और गोवा के चुनावों में कौन सी बड़ी पार्टियां कितनी सीट जीतेंगी. देर न करें!</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/election/t/t.component.html</context>
@@ -1480,7 +1480,7 @@
           <x id="START_TAG_DIV_2" ctype="x-div_2" equiv-text="&lt;div class=&quot;carousel-item&quot;&gt;" />
           <x id="TAG_IMG_2" ctype="x-img_2" equiv-text="&lt;img class=&quot;d-block w-100 px-3&quot; src=&quot;{{image}}img/prizetable.svg&quot; alt=&quot;Second slide&quot;&gt;" />
           <x id="START_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;h5 class=&quot;text&quot;&gt;" />
-          For UTTRAKHAND
+          For MP
           <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;" />
           *
           <x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;" />
@@ -1530,7 +1530,7 @@
           1. Bumper prize will be awarded to the player whose response comes closest to the final results in all 4 states combined - UP, Uttarakhand, Punjab, Goa.
           <x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;" />
           <x id="START_PARAGRAPH_1" equiv-text="&lt;p class=&quot;p&quot;&gt;" />
-          2. State-level prizes (UP or Uttrakhand or Punjab or Goa) will be awarded to players whose responses are the closest to the actual Election Results in the respective state (which will be announced on 10th March, 2022).
+          2. State-level prizes (UP or MP or Punjab or Goa) will be awarded to players whose responses are the closest to the actual Election Results in the respective state (which will be announced on 10th March, 2022).
           <x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;" />
           <x id="START_PARAGRAPH_1" equiv-text="&lt;p class=&quot;p&quot;&gt;" />
           3. The closer you are able to tell the results based upon your knowledge about the subject matter and in depth understanding about the Constituencies and all such other related information/facts which shall have a material bearing on the outcome, the higher your rank and the more you are likely to win a prize
@@ -1774,7 +1774,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="196856758114553749" datatype="html">
-        <source> Play Election Ke Baazigar Game for FREE and WIN prizes worth Rs 5 lakhs!!! Just predict how many seats the major parties will win in the upcoming UP, Uttrakhand, Punjab and Goa Assembly Elections 2022. Hurry!</source>
+        <source> Play Election Ke Baazigar Game for FREE and WIN prizes worth Rs 5 lakhs!!! Just predict how many seats the major parties will win in the upcoming UP, MP, Punjab and Goa Assembly Elections 2022. Hurry!</source>
         <target>खेलें इलेक्शन के बाज़ीगर गेम फ्री में और जीते 5 लाख रुपये के इनाम! बस अंदाज़ा लगाएं कि आने वाले यूपी, उत्तराखंड, पंजाब और गोवा के चुनावों में कौन सी बड़ी पार्टियां कितनी सीट जीतेंगी. देर न करें!</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/election/t/t.component.html</context>
@@ -1817,7 +1817,7 @@
       </trans-unit>
       <trans-unit id="3549626944255820335" datatype="html">
         <source>
-          Tell Us Which Party Will Win How Many Seats In Uttar Pradesh, Punjab, Uttrakhand &amp; Goa Election &amp; Win Upto Rs
+          Tell Us Which Party Will Win How Many Seats In Uttar Pradesh, Punjab, MP &amp; Goa Election &amp; Win Upto Rs
           <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;font-weight-bolder  clr&quot;&gt;" />
           2.5 LACS!!!
           <x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;" />

@@ -44,7 +44,7 @@ export class SelectStateComponent implements OnInit {
         if(result.userData) {
           
           this.data = result.userData;
-          console.log(this.data["Uttarakhand"].length)
+          console.log(this.data["MP"].length)
 
           localStorage.setItem('userData',JSON.stringify(result.userData))
           

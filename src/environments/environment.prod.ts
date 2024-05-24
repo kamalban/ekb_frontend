@@ -10,10 +10,17 @@ function imageUrl(){
 }
 
 export const environment = {
-  baseUrl: 'https://ekb.gamesmasti.com/api/',
-  production: true,
-  url: "https://ekb.gamesmasti.com/api/",
-  image: window.location.pathname +"assets/"
+  // baseUrl: 'https://ekb.gamesmasti.com/api/',
+  // production: true,
+  // url: "https://ekb.gamesmasti.com/api/",
+  // image: window.location.pathname +"assets/"
+  
+   baseUrl: 'http://127.0.0.1:8081/',
+   production: true,
+   url: "http://127.0.0.1:8081/api/",
+   image: window.location.pathname +"assets/"
+
+
 };
 
 // export const environment = {

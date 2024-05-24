@@ -7,55 +7,64 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TipsComponent implements OnInit {
 
-  constructor() { }
-
-  public up: boolean = true;
-  public uttrakhand: boolean = false;
-  public punjab: boolean = false;
-  public goa: boolean = false;
+  constructor() { } 
+  public Rajasthan: boolean = true;
+  public Chattisgarh: boolean = false;
+  public mp: boolean = false;
+  public Telangana: boolean = false;
+  public Mizoram: boolean = false;
   public year2017: boolean = true;
-  public year2012: boolean = false;
+  // public year2012: boolean = false;
   ngOnInit(): void {
   }
   click(name: string){
 
-    if(name === 'up') {
-      this.up = true;
-      this.uttrakhand = false;
-      this.punjab = false;
-      this.goa = false;
+    if(name === 'Rajasthan') {
+      this.Rajasthan = true;
+      this.mp = false;
+      this.Chattisgarh = false;
+      this.Telangana = false;
+      this.Mizoram = false;
+
       return;
     } 
-    if(name === 'uttrakhand') {
-      this.up = false;
-      this.uttrakhand = true;
-      this.punjab = false;
-      this.goa = false;
+    if(name === 'mp') {
+      this.Rajasthan = false;
+      this.mp = true;
+      this.Chattisgarh = false;
+      this.Telangana = false;
+      this.Mizoram = false;
       return;
     }
-    if(name === 'punjab') {
-      this.up = false;
-      this.uttrakhand = false;
-      this.punjab = true;
-      this.goa = false;
+    if(name === 'Chattisgarh') {
+      this.Rajasthan = false;
+      this.mp = false;
+      this.Chattisgarh = true;
+      this.Telangana = false;
+      this.Mizoram = false;
+    }
+    if(name === 'Telangana') {
+      this.Rajasthan = false;
+      this.mp = false;
+      this.Chattisgarh = false;
+      this.Telangana = true;
+      this.Mizoram = false;
       return;
     }
-    if(name === 'goa') {
-      this.up = false;
-      this.uttrakhand = false;
-      this.punjab = false;
-      this.goa = true;
+    if(name === 'Mizoram') {
+      this.Rajasthan = false;
+      this.mp = false;
+      this.Chattisgarh = false;
+      this.Telangana = false;
+      this.Mizoram = true;
       return;
     }
   }
   switchData(name:string){
     if(name === "year2017") {
-      this.year2017 = true;
-      this.year2012 = false;
-    }
-    if(name === "year2012"){
-      this.year2012 = true;
-      this.year2017 = false;
-    }
+      this.year2017 = true; 
+      
+    } 
+   
   }
 }

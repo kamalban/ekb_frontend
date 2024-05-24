@@ -1,7 +1,7 @@
 
 <!-- <app-swiper></app-swiper> -->
 <div class="d-flex justify-content-center">
-<img src="{{image}}img/Homepagesbanner.svg" class="img-100" >
+<img src="{{image}}img/Homepagesbanner.png" class="img-100" >
   </div>
    
   <div class="container px-2 mb-1">
@@ -10,10 +10,9 @@
   </div>
 
 <div class="container px-2 mb-1 text-center">
-  <span class="ptext" i18n>
-    <!-- Tell Us Which Party Will Win How Many Seats In Uttar Pradesh, Punjab, Uttrakhand & Goa Election & Win Upto Rs <span class="font-weight-bolder  clr">2.5 LACS!!! </span>120+ Prizes On Offer - Hurry!</span> -->
-    <!-- The Game is CLOSED now. Winners will be announced on 11th March, 6 pm. Come back to check if you have won a prize. Good luck! -->
-    WINNERS have been announced. <a [routerLink]="['/rank']" class="link">Click Here</a> to check if you have won a prize
+  <span class="ptext" i18n> Predict how many seats the top political parties will win in the
+    MP, Chhattisgarh, Telangana, Rajasthan OR Mizoram Assembly Elections 2023
+    and win loads of prizes!!! <a [routerLink]="['/rank']" class="link">Click Here</a> to check if you have won a prize
   </span>
   </div>
 
@@ -30,10 +29,15 @@
 
 	
 <button *ngIf="strtBtn === false" class="proceed" (click)="state(checkBoxPopUp)">	<span i18n>NEXT</span></button>
-	
+
+
 <button *ngIf="strtBtn === true" class="proceed" (click)="start()">	<span i18n>START</span></button>
 
-
+<div class="term" *ngIf="strtBtn === true" ><p style="background: #eae0bd;
+  padding: 9px;
+  border-radius: 5px;
+  font-size: 18px;
+  color: #692808;"> For more games, go to <a style="color:#2c0b79;text-decoration: underline;" href="https://www.gamesmasti.com/">Gamesmasti.com</a></p></div>
 
 
 <ng-template #checkBoxPopUp let-c="close" let-d="dismiss">
@@ -53,11 +57,6 @@
 
 
 
-<div class="mt-1"> <a class="hundred"  href="http://pubads.g.doubleclick.net/gampad/clk?id=5928785472&iu=/2599136/OzoneOverseas__Click_Tracker" target="_blank" ><img src="{{image}}img/Ozone.jpg" class="d-block m-auto w-50"></a></div>
-
   
 
-
-<iframe src="https://securepubads.g.doubleclick.net/gampad/adx?iu=/2599136/OzoneOverseas__Impression_Tracker&sz=1x1&c=%%CACHEBUSTER%%&tile=1" height="0" width="0" class="invisible"></iframe>
-
-
+ 

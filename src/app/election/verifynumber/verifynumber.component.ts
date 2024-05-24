@@ -65,12 +65,14 @@ export class VerifynumberComponent implements OnInit {
       this.invalidMobileNumberPopUp(param)
       return;
     }
-    console.log(typeof param)
+    console.log(typeof param);
+
     console.log('num is : ' + isNaN(Number(this.number)))
     if (isNaN(Number(this.number))) {
+      //console.log('here enter===',param);
       this.invalidMobileNumberPopUp(param)
       return;
-    }
+    } 
 
     await this.httpService.postRequest('generateotp', { "mobileNumber": this.number }).pipe().subscribe((result: any) => {
       // console.log(result)
@@ -81,11 +83,11 @@ export class VerifynumberComponent implements OnInit {
         this.flag = false;
       }
     }, (error) => {
+      console.log('kamllllllll',error);
       if (error.error.message === 'Registration closed') {
+        console.log('error msgggggggggggg');
         this.modalService.open(this.registrationClosed)
-      } else {
-        this.modalService.open(this.internetNotWorking);
-      }
+      } 
     })
     this.startTimer()
   }

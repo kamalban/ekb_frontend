@@ -1,22 +1,22 @@
-<p class="px-3 blink-soft" i18n="@@1234567891">Congratulations to all the winners. If you have won a prize, you will receive a confirmation
+<!-- <p class="px-3 blink-soft" i18n="@@1234567891">Congratulations to all the winners. If you have won a prize, you will receive a confirmation
   SMS from us on or before 15th March, 2022. Instructions to claim the prize will be provided in the SMS</p>
-
+ -->
 
 
 <div class="zone">
 
   <!-- With Tick Put This Color 00FFFF -->
-  <button [ngClass]="{'active': up }" class="active btn bg-white" (click)="click('up')">Uttarpradesh</button>
-  <button [ngClass]="{'active': uttrakhand }" class="btn bg-white" (click)="click('uttrakhand')">Uttarakhand</button>
-  <button [ngClass]="{'active': punjab}" class="btn bg-white " (click)="click('punjab')">Punjab</button>
-  <button [ngClass]="{'active': goa}" class="btn bg-white" (click)="click('goa')">Goa</button>
-  <button [ngClass]="{'active': overall}" class="btn bg-white" (click)="click('overall')">Over All</button>
+  <button [ngClass]="{'active': rajasthan }" class="active btn bg-white" (click)="click('rajasthan')">Rajasthan</button>
+  <button [ngClass]="{'active': chattisgarh }" class="btn bg-white" (click)="click('chattisgarh')">Chhattisgarh</button>
+  <button [ngClass]="{'active': mp}" class="btn bg-white " (click)="click('mp')">MP</button>
+  <button [ngClass]="{'active': telangana}" class="btn bg-white" (click)="click('telangana')">Telangana</button>
+  <button [ngClass]="{'active': mizoram}" class="btn bg-white" (click)="click('mizoram')">Mizoram</button>
 
 </div>
 
-<div class="uttarpradesh" *ngIf="up === true">
+<div class="uttarpradesh" *ngIf="rajasthan === true">
   <div class="p-3">
-    <div class="main">
+    <div class="main" style="color: #9e9be;background: #9e9be6; height: 24px; border-radius: 5px;">
       <span class="fix" i18n>S.No</span>
       <span class="fix" i18n>Mobile No</span>
       <span class="fix" i18n>D. Score</span>
@@ -29,44 +29,42 @@
         <span class="fix">You</span>
         <span class="fix">{{user[0].mobileNumber}}</span>
         <span class="fix">
-          <div *ngIf="!user[0].score_UP || user[0].score_UP >= 9999">
+          <div *ngIf="!user[0].score_Rajasthan || user[0].score_Rajasthan >= 9999">
             NA
           </div>
-          <div *ngIf="user[0].score_UP < 9999">
-            {{user[0].score_UP}}<span class="red">*</span>
+          <div *ngIf="user[0].score_Rajasthan < 9999">
+            {{user[0].score_Rajasthan}}<span class="red">*</span>
           </div>
         </span>
         <span class="fix">
-        <div *ngIf="!user[0].rank_UP || user[0].rank_UP >= 9999 || user[0].score_UP >= 9999">
+        <div *ngIf="!user[0].rank_Rajasthan || user[0].rank_Rajasthan >= 9999 || user[0].score_Rajasthan >= 9999">
           <span class="fix">NA</span>
         </div>
-        <div *ngIf="user[0].rank_UP < 9999 && user[0].score_UP < 9999">
-          <span class="fix">{{user[0].rank_UP}}<span class="red">*</span></span>
+        <div *ngIf="user[0].rank_Rajasthan < 9999 && user[0].score_Rajasthan < 9999">
+          <span class="fix">{{user[0].rank_Rajasthan}}<span class="red">*</span></span>
         </div>
       </span>
 
       </div>
     </div>
-    <div *ngIf="UP">
-      <div *ngFor="let user of UP; let i = index">
+    <div *ngIf="Rajasthan">
+      <div *ngFor="let user of Rajasthan; let i = index">
         <div [ngClass]="{ 'first' : i <= 30 ,'bgyellow' : i >= 31}">
           <span class="fix">{{i+1}}</span>
           <span class="fix">{{user.mobileNumber}}</span>
-          <span class="fix">{{user.score_UP}}<span class="red">*</span></span>
-          <span class="fix">{{user.rank_UP}}<span class="red">*</span></span>
+          <span class="fix">{{user.score_Rajasthan}}<span class="red">*</span></span>
+          <span class="fix">{{user.rank_Rajasthan}}<span class="red">*</span></span>
 
         </div>
       </div>
     </div>
 
     <div>
-      <p class="ranktext" i18n> Check your RANK and D.SCORE on March 11th, 2022 after the Election results are
-        announced.
-        Save this game/URL to check on March 11th if you have won a prize. Happy Playing!</p>
+      <p class="ranktext" i18n>Can’t wait to check your Rank? Just wait for Election Results to be announced and then come back to check your Rank and D.Score on December 5th, 2023 9 pm. See you soon!</p>
       <!-- <h4 class="savelink"> Save Game</h4> -->
 
     </div>
-    <div *ngIf="user && user[0].rank_UP <= 30 && user[0].score_UP < 9999">
+    <div *ngIf="user && user[0].rank_Rajasthan <= 30 && user[0].score_Rajasthan < 9999">
       <div>
         <button class="proceed" (click)="claim()">Claim</button>
       </div>
@@ -74,9 +72,9 @@
   </div>
 </div>
 
-<div class="uttrakhand" *ngIf="uttrakhand === true">
+<div class="Uttarakhand" style="margin: 20px auto;" *ngIf="chattisgarh === true">
   <div class="p-3">
-    <div class="main">
+    <div class="main" style="color: #9e9be;background: #9e9be6; height: 24px; border-radius: 5px;">
       <span class="fix" i18n>S.No</span>
       <span class="fix" i18n>Mobile No</span>
       <span class="fix" i18n>D. Score</span>
@@ -90,43 +88,41 @@
         <span class="fix">You</span>
         <span class="fix">{{user[0].mobileNumber}}</span>
         <span class="fix">
-          <div *ngIf="!user[0].score_Uttarakhand || user[0].score_Uttarakhand>= 9999">
+          <div *ngIf="!user[0].score_Chattisgarh || user[0].score_Chattisgarh>= 9999">
             NA
           </div>
-          <div *ngIf="user[0].score_Uttarakhand < 9999">
-            {{user[0].score_Uttarakhand}}<span class="red">*</span>
+          <div *ngIf="user[0].score_Chattisgarh < 9999">
+            {{user[0].score_Chattisgarh}}<span class="red">*</span>
           </div>
         </span>
         <span class="fix">
-          <div *ngIf="!user[0].rank_Uttarakhand || user[0].rank_Uttarakhand >= 9999 || user[0].score_Uttarakhand >= 9999">
+          <div *ngIf="!user[0].rank_Chattisgarh || user[0].rank_Chattisgarh >= 9999 || user[0].score_Chattisgarh >= 9999">
             NA
           </div>
-          <div *ngIf="user[0].rank_Uttarakhand < 9999 && user[0].score_Uttarakhand < 9999">
-            {{user[0].rank_Uttarakhand}}<span class="red">*</span>
+          <div *ngIf="user[0].rank_Chattisgarh< 9999 && user[0].score_Chattisgarh < 9999">
+            {{user[0].rank_Chattisgarh}}<span class="red">*</span>
           </div>
         </span>
       </div>
     </div>
 
-    <div *ngIf="Uttarakhand">
-      <div *ngFor="let user of Uttarakhand; let i = index">
+    <div *ngIf="Chattisgarh">
+      <div *ngFor="let user of Chattisgarh; let i = index">
         <div [ngClass]="{ 'first' : i <= 30 ,'bgyellow' : i >= 31}">
           <span class="fix">{{i+1}}</span>
           <span class="fix">{{user.mobileNumber}}</span>
-          <span class="fix">{{user.score_Uttarakhand}}<span class="red">*</span></span>
-          <span class="fix">{{user.rank_Uttarakhand}}<span class="red">*</span></span>
+          <span class="fix">{{user.score_Chattisgarh}}<span class="red">*</span></span>
+          <span class="fix">{{user.rank_Chattisgarh}}<span class="red">*</span></span>
 
         </div>
       </div>
     </div>
     <div>
-      <p class="ranktext" i18n> Check your RANK and D.SCORE on March 11th, 2022 after the Election results are
-        announced.
-        Save this game/URL to check on March 11th if you have won a prize. Happy Playing!</p>
+      <p class="ranktext" i18n>Can’t wait to check your Rank? Just wait for Election Results to be announced and then come back to check your Rank and D.Score on December 5th, 2023 9 pm. See you soon!</p>
       <!-- <h4 class="savelink"> Save Game</h4> -->
 
     </div>
-    <div *ngIf="user && user[0].rank_Uttarakhand <= 30 && user[0].score_Uttarakhand < 9999">
+    <div *ngIf="user && user[0].rank_Chattisgarh <= 30 && user[0].score_Chattisgarh < 9999">
       <div>
         <button class="proceed" (click)="claim()">Claim</button>
       </div>
@@ -135,9 +131,9 @@
 
 </div>
 
-<div class="punjab" *ngIf="punjab === true">
+<div class="punjab" style="width:100%;margin: 20px auto;" *ngIf="mp === true">
   <div class="p-3">
-    <div class="main">
+    <div class="main" style="color: #9e9be;background: #9e9be6; height: 24px; border-radius: 5px;">
       <span class="fix" i18n>S.No</span>
       <span class="fix" i18n>Mobile No</span>
       <span class="fix" i18n>D. Score</span>
@@ -151,44 +147,42 @@
         <span class="fix">You</span>
         <span class="fix">{{user[0].mobileNumber}}</span>
         <span class="fix">
-          <div *ngIf="!user[0].score_Punjab || user[0].score_Punjab >= 9999">
+          <div *ngIf="!user[0].score_mp || user[0].score_mp >= 9999">
             NA
           </div>
-          <div *ngIf="user[0].score_Punjab < 9999">
-            {{user[0].score_Punjab}}<span class="red">*</span>
+          <div *ngIf="user[0].score_mp < 9999">
+            {{user[0].score_mp}}<span class="red">*</span>
           </div>
         </span>
         <span class="fix">
-          <div *ngIf="!user[0].rank_Punjab || user[0].rank_Punjab >= 9999 || user[0].score_Punjab >= 9999">
+          <div *ngIf="!user[0].rank_mp || user[0].rank_mp >= 9999 || user[0].score_mp >= 9999">
             NA
           </div>
-          <div *ngIf="user[0].rank_Punjab < 9999 && user[0].score_Punjab < 9999">
-            {{user[0].rank_Punjab}}<span class="red">*</span>
+          <div *ngIf="user[0].rank_mp < 9999 && user[0].score_mp < 9999">
+            {{user[0].rank_mp}}<span class="red">*</span>
           </div>
         </span>
 
       </div>
     </div>
 
-    <div *ngIf="Punjab">
-      <div *ngFor="let user of Punjab; let i = index">
+    <div *ngIf="mp">
+      <div *ngFor="let user of MP; let i = index">
         <div [ngClass]="{ 'first' : i <=30 ,'bgyellow' : i >=31}">
           <span class="fix">{{i+1}}</span>
           <span class="fix">{{user.mobileNumber}}</span>
-          <span class="fix">{{user.score_Punjab}}<span class="red">*</span></span>
-          <span class="fix">{{user.rank_Punjab}}<span class="red">*</span></span>
+          <span class="fix">{{user.score_mp}}<span class="red">*</span></span>
+          <span class="fix">{{user.rank_mp}}<span class="red">*</span></span>
 
         </div>
       </div>
     </div>
     <div>
-      <p class="ranktext" i18n> Check your RANK and D.SCORE on March 11th, 2022 after the Election results are
-        announced.
-        Save this game/URL to check on March 11th if you have won a prize. Happy Playing!</p>
+      <p class="ranktext" i18n>Can’t wait to check your Rank? Just wait for Election Results to be announced and then come back to check your Rank and D.Score on December 5th, 2023 9 pm. See you soon!</p>
       <!-- <h4 class="savelink"> Save Game</h4> -->
 
     </div>
-    <div *ngIf="user && user[0].rank_Punjab <= 30 && user[0].score_Punjab < 9999">
+    <div *ngIf="user && user[0].rank_mp <= 30 && user[0].score_mp < 9999">
       <div>
         <button class="proceed" (click)="claim()">Claim</button>
       </div>
@@ -196,9 +190,9 @@
   </div>
 </div>
 
-<div class="goa" *ngIf="goa === true">
+<div class="goa" *ngIf="telangana === true">
   <div class="p-3">
-    <div class="main">
+    <div class="main" style="color: #9e9be;background: #9e9be6; height: 24px; border-radius: 5px;">
       <span class="fix" i18n>S.No</span>
       <span class="fix" i18n>Mobile No</span>
       <span class="fix" i18n>D. Score</span>
@@ -211,45 +205,43 @@
         <span class="fix">1</span>
         <span class="fix">{{user[0].mobileNumber}}</span>
         <span class="fix">
-          <div *ngIf="!user[0].score_Goa ||user[0].score_Goa >= 9999">
+          <div *ngIf="!user[0].score_Telangana ||user[0].score_Telangana >= 9999">
             NA
           </div>
-          <div *ngIf="user[0].score_Goa < 9999">
-            {{user[0].score_Goa}}<span class="red">*</span>
+          <div *ngIf="user[0].score_Telangana < 9999">
+            {{user[0].score_Telangana}}<span class="red">*</span>
           </div>
         </span>
         <span class="fix">
-          <div *ngIf="!user[0].rank_Goa ||user[0].rank_Goa >= 9999 || user[0].score_Goa >= 9999">
+          <div *ngIf="!user[0].rank_Telangana ||user[0].rank_Telangana >= 9999 || user[0].score_Telangana >= 9999">
             NA
           </div>
-          <div *ngIf="user[0].rank_Goa < 9999 && user[0].score_Goa < 9999">
-            {{user[0].rank_Goa}}<span class="red">*</span>
+          <div *ngIf="user[0].rank_Telangana < 9999 && user[0].score_Telangana < 9999">
+            {{user[0].rank_Telangana}}<span class="red">*</span>
           </div>
         </span>
 
       </div>
     </div>
 
-    <div *ngIf="Goa">
-      <div *ngFor="let user of Goa; let i = index">
+    <div *ngIf="Telangana">
+      <div *ngFor="let user of Telangana; let i = index">
         <div [ngClass]="{ 'first' : i <=30 ,'bgyellow' : i >=31}">
           <span class="fix">{{i+1}}</span>
           <span class="fix">{{user.mobileNumber}}</span>
-          <span class="fix">{{user.score_Goa}}<span class="red">*</span></span>
-          <span class="fix">{{user.rank_Goa}}<span class="red">*</span></span>
+          <span class="fix">{{user.score_Telangana}}<span class="red">*</span></span>
+          <span class="fix">{{user.rank_Telangana}}<span class="red">*</span></span>
 
         </div>
       </div>
     </div>
 
     <div>
-      <p class="ranktext" i18n> Check your RANK and D.SCORE on March 11th, 2022 after the Election results are
-        announced.
-        Save this game/URL to check on March 11th if you have won a prize. Happy Playing!</p>
+      <p class="ranktext" i18n>Can’t wait to check your Rank? Just wait for Election Results to be announced and then come back to check your Rank and D.Score on December 5th, 2023 9 pm. See you soon!</p>
       <!-- <h4 class="savelink"> Save Game</h4> -->
 
     </div>
-    <div *ngIf="user && user[0].rank_Goa <= 30 && user[0].score_Goa < 9999">
+    <div *ngIf="user && user[0].rank_Telangana <= 30 && user[0].score_Telangana < 9999">
       <div>
         <button class="proceed" (click)="claim()">Claim</button>
       </div>
@@ -260,9 +252,11 @@
 
 </div>
 
-<div class="goa" *ngIf="overall === true">
+
+
+<div class="goa" *ngIf="mizoram === true">
   <div class="p-3">
-    <div class="main">
+    <div class="main" style="color: #9e9be;background: #9e9be6; height: 24px; border-radius: 5px;">
       <span class="fix" i18n>S.No</span>
       <span class="fix" i18n>Mobile No</span>
       <span class="fix" i18n>D. Score</span>
@@ -272,54 +266,57 @@
 
     <div *ngIf="user">
       <div class="bgyellow">
-        <span class="fix">You</span>
+        <span class="fix">1</span>
         <span class="fix">{{user[0].mobileNumber}}</span>
         <span class="fix">
-          <div *ngIf="!user[0].score_OverAll || user[0].score_OverAll >= 9999">
+          <div *ngIf="!user[0].score_Mizoram ||user[0].score_Mizoram >= 9999">
             NA
           </div>
-          <div *ngIf="user[0].score_OverAll < 9999 ">
-            {{user[0].score_OverAll}}<span class="red">*</span>
+          <div *ngIf="user[0].score_Mizoram < 9999">
+            {{user[0].score_Mizoram}}<span class="red">*</span>
           </div>
         </span>
         <span class="fix">
-          <div *ngIf="!user[0].rank_OverAll || user[0].rank_OverAll >= 9999 || user[0].score_OverAll >= 9999">
+          <div *ngIf="!user[0].rank_Mizoram ||user[0].rank_Mizoram >= 9999 || user[0].score_Mizoram >= 9999">
             NA
           </div>
-          <div *ngIf="user[0].rank_OverAll < 9999 && user[0].score_OverAll < 9999">
-            {{user[0].rank_OverAll}}<span class="red">*</span>
+          <div *ngIf="user[0].rank_Mizoram < 9999 && user[0].score_Mizoram < 9999">
+            {{user[0].rank_Mizoram}}<span class="red">*</span>
           </div>
         </span>
 
       </div>
     </div>
 
-    <div *ngIf="OverAll">
-      <div *ngFor="let user of OverAll; let i = index">
+    <div *ngIf="Mizoram">
+      <div *ngFor="let user of Mizoram; let i = index">
         <div [ngClass]="{ 'first' : i <=30 ,'bgyellow' : i >=31}">
           <span class="fix">{{i+1}}</span>
           <span class="fix">{{user.mobileNumber}}</span>
-          <span class="fix">{{user.score_OverAll}}<span class="red">*</span></span>
-          <span class="fix">{{user.rank_OverAll}}<span class="red">*</span></span>
+          <span class="fix">{{user.score_Mizoram}}<span class="red">*</span></span>
+          <span class="fix">{{user.rank_Mizoram}}<span class="red">*</span></span>
 
         </div>
       </div>
     </div>
 
     <div>
-      <p class="ranktext" i18n> Check your RANK and D.SCORE on March 11th, 2022 after the Election results are
-        announced.
-        Save this game/URL to check on March 11th if you have won a prize. Happy Playing!</p>
+      <p class="ranktext" i18n>Can’t wait to check your Rank? Just wait for Election Results to be announced and then come back to check your Rank and D.Score on December 5th, 2023 9 pm. See you soon!</p>
       <!-- <h4 class="savelink"> Save Game</h4> -->
 
     </div>
-    <div *ngIf="user && user[0].rank_OverAll <= 30 && user[0].score_OverAll < 9999">
+    <div *ngIf="user && user[0].rank_Mizoram <= 30 && user[0].score_Mizoram < 9999">
       <div>
         <button class="proceed" (click)="claim()">Claim</button>
       </div>
     </div>
+
   </div>
+
+
 </div>
+
+
 
 <ng-template #internetNotWorking let-c="close" let-d="dismiss">
   <div class="modal-header">

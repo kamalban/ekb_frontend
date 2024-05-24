@@ -17,30 +17,25 @@ export class RankComponent implements OnInit {
     private route: Router
   ) { }
 
-  public up: boolean = true;
-  public uttrakhand: boolean = false;
-  public punjab: boolean = false;
-  public goa: boolean = false;
-  public year2017: boolean = true;
-  public year2012: boolean = false;
+  public rajasthan: boolean = true;
+  public chattisgarh: boolean = false;
+  public mp: boolean = false;
+  public telangana: boolean = false;
+  public mizoram: boolean = false; 
 
-  public UP: any;
-  public UP_Awadh: any;
-  public UP_Bundelkhand: any;
-  public UP_Purwanchal: any;
-  public UP_WestUP: any;
-  public Goa: any;
-  public overall:any;
-  public Punjab: any;
-  public Uttarakhand: any;
+
+  public Rajasthan: any;
+  public Chattisgarh: any;
+  public MP: any;
+  public Telangana: any;
+  public Mizoram: any;
+  public year2017: any;
+  public year2012: any;
   public user: any;
-  public OverAll:any;
-
-
+  
   ngOnInit(): void {
     this.getLeaderBoardData()
-  }
-
+  } 
 
   async getLeaderBoardData() {
     let tmpData: any = localStorage.getItem('userData') || '';
@@ -54,16 +49,12 @@ export class RankComponent implements OnInit {
         // console.log(JSON.parse(result))
         result = JSON.parse(result.message)
         console.log(result)
-        this.UP = result.UP;
-        this.UP_Awadh = result.UP_Awadh;
-        this.UP_Bundelkhand = result.UP_Bundelkhand;
-        this.UP_Purwanchal = result.UP_Purwanchal;
-        this.UP_WestUP = result.UP_WestUP;
-        this.Goa = result.Goa;
-        this.Punjab = result.Punjab;
-        this.Uttarakhand = result.Uttarakhand;
-        this.user = result.user;
-        this.OverAll = result.OverAll
+        this.Rajasthan = result.Rajasthan;        
+        this.Chattisgarh = result.Chattisgarh;
+        this.MP = result.MP;
+        this.Telangana = result.Telangana;
+        this.Mizoram = result.Mizoram;
+        this.user = result.user; 
       }
     }, (error) => {
 
@@ -73,46 +64,44 @@ export class RankComponent implements OnInit {
 
   click(name: string) {
 
-    if (name === 'up') {
-      this.up = true;
-      this.uttrakhand = false;
-      this.punjab = false;
-      this.goa = false;
-      this.overall = false;
+    if (name === 'rajasthan') {
+      this.rajasthan = true;
+      this.chattisgarh = false;
+      this.mp = false;
+      this.telangana = false;
+      this.mizoram = false;
       return;
     }
-    if (name === 'uttrakhand') {
-      this.up = false;
-      this.uttrakhand = true;
-      this.punjab = false;
-      this.goa = false;
-      this.overall = false;
-      
+    if (name === 'chattisgarh') {
+      this.rajasthan = false;
+      this.chattisgarh = true;
+      this.mp = false;
+      this.telangana = false;
+      this.mizoram = false;
       return;
     }
-    if (name === 'punjab') {
-      this.up = false;
-      this.uttrakhand = false;
-      this.punjab = true;
-      this.goa = false;
-      this.overall = false;
-
+    if (name === 'mp') {
+      this.rajasthan = false;
+      this.chattisgarh = false;
+      this.mp = true;
+      this.telangana = false;
+      this.mizoram = false;
+      return; 
+    }
+    if (name === 'telangana') {
+      this.rajasthan = false;
+      this.chattisgarh = false;
+      this.mp = false;
+      this.telangana = true;
+      this.mizoram = false;
       return;
     }
-    if (name === 'goa') {
-      this.up = false;
-      this.uttrakhand = false;
-      this.punjab = false;
-      this.goa = true;
-      this.overall = false;
-      return;
-    }
-    if (name === 'overall') {
-      this.up = false;
-      this.uttrakhand = false;
-      this.punjab = false;
-      this.goa = false;
-      this.overall = true;
+    if (name === 'mizoram') {
+      this.rajasthan = false;
+      this.chattisgarh = false;
+      this.mp = false;
+      this.telangana = false;
+      this.mizoram = true;
       return;
     }
   }

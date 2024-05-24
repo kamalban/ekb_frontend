@@ -1,16 +1,16 @@
 
-<div class="heading">
+<div class="heading mb-1">
     <p class="back-trans"><span i18n>Welcome Baazigar! For which state would you like to predict the election results?</span></p>
 </div>
 <div class="container">
-    <div  *ngIf="stateFlag" class="row px-4 text-center minus-margin">
+    <div  *ngIf="stateFlag" class="row px-4 text-center minus-margin justify-content-center">
 
-            <div *ngFor="let stateName of doneState; let i = index" class="col-6 p-0 m-0">
+            <div *ngFor="let stateName of doneState; let i = index" class="col-4 p-0 m-0">
                   
               <div class="posre">
                 <img src="{{image}}img/{{state[i]}}.svg" class="width"
-                    [routerLink]="['/preview',{'state':state[i]}]">
-                    <div class="posab"><img src="{{image}}img/text{{state[i]}}.svg"></div>
+                    [routerLink]="['/s_state',{'state':state[i]}]">
+                    <!-- <div class="posab"><img src="{{image}}img/text{{state[i]}}.svg"></div> -->
                     <div *ngIf="stateName === 'Checked-'+state[i]" class="postick"><img src="{{image}}img/bigtick.svg"></div>
                   </div>
             </div>
@@ -32,7 +32,6 @@
     </button>
   </div>
 </ng-template>
-<div class="mt-1"> <a class="hundred"  href="http://pubads.g.doubleclick.net/gampad/clk?id=5928785472&iu=/2599136/OzoneOverseas__Click_Tracker" target="_blank" ><img src="{{image}}img/Ozone.jpg" class="d-block m-auto w-50"></a></div>
 
 
-<iframe src="https://securepubads.g.doubleclick.net/gampad/adx?iu=/2599136/OzoneOverseas__Impression_Tracker&sz=1x1&c=%%CACHEBUSTER%%&tile=1" height="0" width="0" class="invisible"></iframe>
+ 

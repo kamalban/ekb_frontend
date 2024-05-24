@@ -9,18 +9,18 @@
 		<span class="ml-3" i18n>Your Prediction Has Been Saved.</span></div>
 	 </div>
 	
- <p class="bazigaar px-3" i18n>Hey Baazigar! Change your prediction anytime you want until <span class="orange">6th March, 2022</span></p>
+ <p class="bazigaar px-3" i18n>Hey Baazigar! Change your prediction anytime you want until <span class="orange">1st December, 2023</span></p>
 
 	<div class="text-arrange">
 	
-
+<!-- 
 <div class="d-flex container">
 	<div class="row">
 		<div class="col-6"><img src="../../../assets/img/asianpaints2.svg" class="img-100 ml-2"></div>
 
 	<div class="col-4 col-md-5 p-0"><a (click)="knowMore()" href="http://pubads.g.doubleclick.net/gampad/clk?id=5911234079&iu=/2599136/Click_Tracker" target="_blank" class="text-asian" >Click here to book a 3D design consultation with an asian paints expert</a></div>
 </div>
-</div>
+</div> -->
 
 
 		<div class="congrats_btn">
@@ -42,7 +42,7 @@
 		<div *ngFor="let s of listShow2; let i = index" class="col-4 p-0 m-0">
 			<div class="posre">
 				<img src="{{image}}img/{{s}}.svg" class="img-100" [routerLink]="['/s_state',{'state':s}]">
-				<div class="posab"><img src="{{image}}img/text{{s}}.svg"></div>
+				<!-- <div class="posab"><img src="{{image}}img/text{{s}}.svg"></div> -->
 				<div  *ngIf="listShow[i] === 'Checked-'+s" class="postick"><img src="{{image}}img/bigtick.svg"></div>
 			  </div>
 		</div>

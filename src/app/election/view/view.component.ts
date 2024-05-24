@@ -75,33 +75,46 @@ export class ViewComponent implements OnInit {
       "INC": "#7F3DFF",
       "Others": "#25386F",
     },
-    "Punjab": {
+   
+    "Rajasthan": {
       "INC": "#F65354",
-      "SAD+": "#F2AE2E",
-      "AAP": "#27AE60",
-      "BJP+": "#7F3DFF",
+      "BJP": "#7F3DFF",       
+      "BSP": "#27AE60",
       "Others": "#25386F",
     },
-    "Uttarakhand": {
+    "Chhattisgarh": {
       "INC": "#F65354",
-      "BJP": "#F2AE2E",
-      "AAP": "#27AE60",
-      "Others": "#7F3DFF"
-    },
-    "Goa": {
-      "INC+": "#F65354",
-      "BJP": "#F2AE2E",
-      "AAP": "#27AE60",
-      "MGP+": "#7F3DFF",
+      "BJP": "#7F3DFF", 
       "Others": "#25386F",
     },
+    "MP": {
+      "INC": "#F65354",
+      "BJP": "#7F3DFF",       
+      "BSP": "#27AE60",
+      "Others": "#25386F",
+    },
+    "Mizoram": {
+      "INC": "#F65354",
+      "MNF": "#7F3DFF",       
+      "ZPM": "#27AE60",
+      "Others": "#25386F",
+    },
+    "Telangana": {
+      "INC": "#F65354",
+      "BJP": "#7F3DFF",       
+      "BRS": "#27AE60",
+      "Others": "#25386F",
+    }
   }
 
   public nameParty: any = {
     "UP": ["BJP+", "SP+", "BSP", "INC", "Others"],
-    "Goa": ["INC+", "BJP", "AAP", "MGP+", "Others"],
-    "Uttarakhand": ["INC", "BJP", "AAP", "Others"],
-    "Punjab": ["INC", "SAD+", "AAP", "BJP+", "Others"]
+    "Rajasthan": ["INC", "BJP", "BSP", "Others"],
+    "Chhattisgarh": ["INC", "BJP", "AAP", "Others"],
+    "MP": ["INC", "BJP", "BSP", "Others"],
+    "Mizoram": ["INC", "MNF", "ZPM",  "Others"],
+    "Telangana": ["INC", "BRS",  "BJP", "Others"]
+
   }
 
   // "#F65354", //1
